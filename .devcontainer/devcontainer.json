@@ -1,0 +1,16 @@
+{
+    "name": "Infra Automation Dev",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "settings": {
+      "terminal.integrated.defaultProfile.linux": "bash"
+    },
+    "postCreateCommand": "terraform -version && ansible --version && pip list",
+    "features": {
+      "ghcr.io/devcontainers/features/aws-cli:1": {}
+    },
+    "forwardPorts": [8000],
+    "remoteUser": "vscode"
+  }
+  
